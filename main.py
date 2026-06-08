@@ -4,7 +4,10 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 # Press the green button in the gutter to run the script.
+import os
+
 from Settings.Setting import Setting
+from Settings.SettingScreen import SettingScreen
 from Workout import Workout
 from db.structure.StrExercise import StrExercise
 from db.structure.StrTrainingPlans import StrTrainingPlans
@@ -15,7 +18,9 @@ from db.table.Exercise import Exercise
 from db.table.TrainingPlans import TrainingPlans
 # from db.table.tables import UsersTable, TrainingPlansTable
 from db.table.tables import TrainingPlansTable, WorkoutTable, WorkoutExercisesTable, ExerciseTable
+from file_management.FileManager import FileManager
 
+import tkinter as tk
 
 def select_training_plans() -> list:
     training_plans: list = []
@@ -279,6 +284,11 @@ if __name__ == '__main__':
                 close = True
                 break"""
 
+    if not os.path.exists(r"C:\SchedePalestra"):
+        FileManager.directory_create(r"C:\SchedePalestra")
+
     setting: Setting = Setting()
+
+    SettingScreen()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

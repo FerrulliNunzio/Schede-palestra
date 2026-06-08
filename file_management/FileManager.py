@@ -79,6 +79,11 @@ class FileManager:
         return file_table
 
     @staticmethod
+    def directory_create(directory: str):
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+
+    @staticmethod
     def download_file(filename: str, data_tab: list, filetype: str = "ASC", append: str = "",
                       write_field_separator: str = "", confirm_overwrite: bool = False):
 
