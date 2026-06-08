@@ -4,6 +4,7 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 # Press the green button in the gutter to run the script.
+from Settings.Setting import Setting
 from Workout import Workout
 from db.structure.StrExercise import StrExercise
 from db.structure.StrTrainingPlans import StrTrainingPlans
@@ -30,7 +31,7 @@ def select_workout(training_plans_id: str):
             workout.append('(' + item.id_training_plan.__str__() + ') ' + item.name)
     return workout
 
-def ins_tab(input_string: str, tab_position: int):
+"""def ins_tab(input_string: str, tab_position: int):
     if tab_position == 50:
         match len(input_string):
             case 1:
@@ -179,7 +180,7 @@ def ins_tab(input_string: str, tab_position: int):
                 input_string += ' |'
             case 15:
                 input_string += '|'
-    return input_string
+    return input_string"""
 
 
 
@@ -218,7 +219,7 @@ if __name__ == '__main__':
     WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, exercise_id=9, sets=4, reps='12-15', weight=20))
     WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, exercise_id=10, sets=4, reps='MAX', weight=0))
 """
-    close: bool = False
+    """close: bool = False
     option: str = ''
 
     while not close:
@@ -276,6 +277,8 @@ if __name__ == '__main__':
                             print(item)
             case '2':
                 close = True
-                break
+                break"""
+
+    setting: Setting = Setting()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
