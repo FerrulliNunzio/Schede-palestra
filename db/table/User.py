@@ -11,7 +11,7 @@ class User(TableOperation):
     def __init__(self):
         self.__users: list = []
         try:
-            users = pd.read_csv("Users.csv")
+            users = pd.read_csv(r"C:\SchedePalestra\Users.csv")
             self.__users = users.values.tolist()
         except FileNotFoundError:
             self.__users = []
@@ -30,7 +30,7 @@ class User(TableOperation):
                                 item.username,
                                 item.password,
                                 item.get_reminder_password()])
-            self.save_table("Users.csv", to_save)
+            self.save_table(r"C:\SchedePalestra\Users.csv", to_save)
         else:
             if any(user_db.username == user.username for user_db in self.__users):
                 raise GeneralErrorException(f"L'utente è già presente a sistema")
@@ -42,7 +42,7 @@ class User(TableOperation):
                                 item.username,
                                 item.password,
                                 item.get_reminder_password()])
-            self.save_table("Users.csv", to_save)
+            self.save_table(r"C:\SchedePalestra\Users.csv", to_save)
 
     def get_user(self, index):
         return self.__users[index]

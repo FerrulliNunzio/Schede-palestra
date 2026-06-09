@@ -9,10 +9,10 @@ class WorkoutExercises(TableOperation):
     def __init__(self):
         self.__workout_exercises: list = []
         try:
-            workout = pd.read_csv("WorkoutExercises.csv")
+            workout = pd.read_csv(r"C:\SchedePalestra\WorkoutExercises.csv")
             lst = workout.values.tolist()
             for item in lst:
-                self.__workout_exercises.append(StrWorkoutExercises(item[0], item[1], item[2], item[3], item[4]))
+                self.__workout_exercises.append(StrWorkoutExercises(item[0], item[1], item[2], item[3], item[4], item[5]))
         except FileNotFoundError:
             self.__training_plans = []
 
@@ -24,6 +24,7 @@ class WorkoutExercises(TableOperation):
         to_save: list = []
         to_save.append([
             'workout_id',
+            'id_training_plan',
             'exercise_id',
             'sets',
             'reps',
@@ -31,12 +32,13 @@ class WorkoutExercises(TableOperation):
         ])
         for item in self.__workout_exercises:
             to_save.append([item.workout_id,
+                            item.id_training_plan,
                             item.exercise_id,
                             item.sets,
                             item.reps,
                             item.weight,
                             ])
-        self.save_table("WorkoutExercises.csv", to_save)
+        self.save_table(r"C:\SchedePalestra\WorkoutExercises.csv", to_save)
 
     def size(self) -> int:
         return len(self.__workout_exercises)

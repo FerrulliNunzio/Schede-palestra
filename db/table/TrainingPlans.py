@@ -7,7 +7,7 @@ class TrainingPlans(TableOperation):
     def __init__(self):
         self.__training_plans: list = []
         try:
-            training_plans = pd.read_csv("TrainingPlans.csv")
+            training_plans = pd.read_csv(r"C:\SchedePalestra\TrainingPlans.csv")
             lst = training_plans.values.tolist()
             for item in lst:
                 self.__training_plans.append(StrTrainingPlans(item[0], item[1], item[2], item[3], item[4], item[5]))
@@ -37,7 +37,7 @@ class TrainingPlans(TableOperation):
                                 item.Name,
                                 item.Goal,
                                 item.Duration])
-            self.save_table("TrainingPlans.csv", to_save)
+            self.save_table(r"C:\SchedePalestra\TrainingPlans.csv", to_save)
         else:
             training_plans.TrainingPlansId = self.find_new_primary_key()
             self.__training_plans.append(training_plans)
@@ -57,7 +57,7 @@ class TrainingPlans(TableOperation):
                                 item.Name,
                                 item.Goal,
                                 item.Duration])
-            self.save_table("TrainingPlans.csv", to_save)
+            self.save_table(r"C:\SchedePalestra\TrainingPlans.csv", to_save)
 
     def size(self) -> int:
         return len(self.__training_plans)

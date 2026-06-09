@@ -7,7 +7,7 @@ class Workout(TableOperation):
     def __init__(self):
         self.__workout: list = []
         try:
-            workout = pd.read_csv("Workout.csv")
+            workout = pd.read_csv(r"C:\SchedePalestra\Workout.csv")
             lst = workout.values.tolist()
             for item in lst:
                 self.__workout.append(StrWorkout(item[0], item[1], item[2], item[3]))
@@ -34,7 +34,7 @@ class Workout(TableOperation):
                                 item.name,
                                 item.day_week,
                                 ])
-            self.save_table("Workout.csv", to_save)
+            self.save_table(r"C:\SchedePalestra\Workout.csv", to_save)
         else:
             if workout.id_workout == 0:
                 workout.id_workout = self.find_new_primary_key()
@@ -52,7 +52,7 @@ class Workout(TableOperation):
                                 item.name,
                                 item.day_week,
                                 ])
-            self.save_table("Workout.csv", to_save)
+            self.save_table(r"C:\SchedePalestra\Workout.csv", to_save)
 
 
     def size(self) -> int:
