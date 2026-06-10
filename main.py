@@ -21,15 +21,15 @@ from file_management.FileManager import FileManager
     TrainingPlansTable.add_training_plans(StrTrainingPlans(user_id=1, workout=3, name="4",goal="Ipertrofia", duration=8))
     TrainingPlansTable.add_training_plans(StrTrainingPlans(user_id=1, workout=3, name="5",goal="Ipertrofia", duration=8))"""
 
-
 if __name__ == '__main__':
 
     if not os.path.exists(r"C:\SchedePalestra"):
         FileManager.directory_create(r"C:\SchedePalestra")
 
-# Prima scheda
+    """# Prima scheda
 
-    TrainingPlansTable.add_training_plans(StrTrainingPlans(user_id=1, workout=3, name="Multifrequenza Intermedio", goal="Ipertrofia", duration=8))
+    TrainingPlansTable.add_training_plans(
+        StrTrainingPlans(user_id=1, workout=3, name="Multifrequenza Intermedio", goal="Ipertrofia", duration=8))
 
     WorkoutTable.add_workout(StrWorkout(id_workout=1, id_training_plan=1, name="Push", day_week="Lunedi"))
     WorkoutTable.add_workout(StrWorkout(id_workout=1, id_training_plan=2, name="Pull", day_week="Mercoledi"))
@@ -85,89 +85,142 @@ if __name__ == '__main__':
     ExerciseTable.add_exercise(StrExercise(id_exercise=44, name="PANCA SCOTT BILANCIERE PRESA INVERSA"))
     ExerciseTable.add_exercise(StrExercise(id_exercise=45, name="CRUNCH DOPPIO"))
 
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=1, exercise_id=1, sets=4, reps='6', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=1, exercise_id=2, sets=3, reps='10', weight=20))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=1, exercise_id=3, sets=3, reps='12', weight=10))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=1, exercise_id=4, sets=4, reps='10-8-6-4', weight=10))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=1, exercise_id=5, sets=3, reps='10-12', weight=8))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=1, exercise_id=6, sets=4, reps='8-10', weight=20))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=1, exercise_id=7, sets=4, reps='8-10', weight=20))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=1, exercise_id=8, sets=4, reps='8+MAX', weight=10))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=1, exercise_id=9, sets=4, reps='12-15', weight=20))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=1, exercise_id=10, sets=4, reps='12-15', weight=20))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=1, exercise_id=1, sets=4, reps='6', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=1, exercise_id=2, sets=3, reps='10', weight=20))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=1, exercise_id=3, sets=3, reps='12', weight=10))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=1, exercise_id=4, sets=4, reps='10-8-6-4', weight=10))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=1, exercise_id=5, sets=3, reps='10-12', weight=8))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=1, exercise_id=6, sets=4, reps='8-10', weight=20))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=1, exercise_id=7, sets=4, reps='8-10', weight=20))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=1, exercise_id=8, sets=4, reps='8+MAX', weight=10))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=1, exercise_id=9, sets=4, reps='12-15', weight=20))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=1, exercise_id=10, sets=4, reps='12-15', weight=20))
 
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=2, exercise_id=11, sets=4, reps='4-6', weight=25))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=2, exercise_id=12, sets=3, reps='8-10', weight=0))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=2, exercise_id=13, sets=3, reps='10-12', weight=35))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=2, exercise_id=14, sets=4, reps='MAX', weight=0))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=2, exercise_id=15, sets=4, reps='10-8-6-4', weight=20))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=2, exercise_id=16, sets=3, reps='10-12', weight=30))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=2, exercise_id=17, sets=4, reps='8+MAX', weight=20))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=2, exercise_id=18, sets=4, reps='8-10', weight=10))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=2, exercise_id=19, sets=4, reps='8-10', weight=10))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=2, exercise_id=11, sets=4, reps='4-6', weight=25))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=2, exercise_id=12, sets=3, reps='8-10', weight=0))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=2, exercise_id=13, sets=3, reps='10-12', weight=35))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=2, exercise_id=14, sets=4, reps='MAX', weight=0))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=2, exercise_id=15, sets=4, reps='10-8-6-4', weight=20))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=2, exercise_id=16, sets=3, reps='10-12', weight=30))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=2, exercise_id=17, sets=4, reps='8+MAX', weight=20))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=2, exercise_id=18, sets=4, reps='8-10', weight=10))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=2, exercise_id=19, sets=4, reps='8-10', weight=10))
 
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=3, exercise_id=20, sets=4, reps='4-6', weight=20))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=3, exercise_id=21, sets=3, reps='16 PASSI', weight=20))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=3, exercise_id=22, sets=3, reps='10-12', weight=20))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=3, exercise_id=23, sets=4, reps='8+MAX', weight=20))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=3, exercise_id=24, sets=4, reps='8+MAX', weight=20))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=3, exercise_id=25, sets=4, reps='10-8-6-4', weight=20))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=3, exercise_id=26, sets=4, reps='8+MAX', weight=20))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=3, exercise_id=27, sets=4, reps='10-12', weight=20))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=1, id_training_plan=3, exercise_id=28, sets=4, reps='10-12', weight=20))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=3, exercise_id=20, sets=4, reps='4-6', weight=20))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=3, exercise_id=21, sets=3, reps='16 PASSI', weight=20))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=3, exercise_id=22, sets=3, reps='10-12', weight=20))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=3, exercise_id=23, sets=4, reps='8+MAX', weight=20))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=3, exercise_id=24, sets=4, reps='8+MAX', weight=20))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=3, exercise_id=25, sets=4, reps='10-8-6-4', weight=20))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=3, exercise_id=26, sets=4, reps='8+MAX', weight=20))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=3, exercise_id=27, sets=4, reps='10-12', weight=20))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=1, id_training_plan=3, exercise_id=28, sets=4, reps='10-12', weight=20))
 
-# Seconda scheda
+    # Seconda scheda
 
-    TrainingPlansTable.add_training_plans(StrTrainingPlans(user_id=1, workout=3, name="1", goal="Ipertrofia", duration=8))
+    TrainingPlansTable.add_training_plans(
+        StrTrainingPlans(user_id=1, workout=3, name="1", goal="Ipertrofia", duration=8))
 
     WorkoutTable.add_workout(StrWorkout(id_workout=2, id_training_plan=1, name="Lunedì", day_week="Lunedi"))
     WorkoutTable.add_workout(StrWorkout(id_workout=2, id_training_plan=2, name="Mercoledì", day_week="Mercoledi"))
     WorkoutTable.add_workout(StrWorkout(id_workout=2, id_training_plan=3, name="Venerdì", day_week="Venerdi"))
 
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=1, exercise_id=29, sets=3, reps='10-15', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=1, exercise_id=22, sets=3, reps='12-10-8', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=1, exercise_id=20, sets=3, reps='8-10', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=1, exercise_id=30, sets=3, reps='8-10', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=1, exercise_id=31, sets=3, reps='12-10-8', weight=22))
-    WorkoutExercisesTable.add_workout_exercise( StrWorkoutExercises(workout_id=2, id_training_plan=1, exercise_id=32, sets=3, reps='8-10', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=1, exercise_id=33, sets=2, reps='MAX', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=1, exercise_id=27, sets=3, reps='12-10-8', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=1, exercise_id=34, sets=2, reps='8-10', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=1, exercise_id=29, sets=3, reps='10-15', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=1, exercise_id=22, sets=3, reps='12-10-8', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=1, exercise_id=20, sets=3, reps='8-10', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=1, exercise_id=30, sets=3, reps='8-10', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=1, exercise_id=31, sets=3, reps='12-10-8', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=1, exercise_id=32, sets=3, reps='8-10', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=1, exercise_id=33, sets=2, reps='MAX', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=1, exercise_id=27, sets=3, reps='12-10-8', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=1, exercise_id=34, sets=2, reps='8-10', weight=22))
 
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=2, exercise_id=26, sets=3, reps='8-12', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=2, exercise_id=35, sets=2, reps='10', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=2, exercise_id=36, sets=3, reps='8-12', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=2, exercise_id=1, sets=3, reps='8', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=2, exercise_id=37, sets=2, reps='12', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=2, exercise_id=38, sets=2, reps='12-10', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=2, exercise_id=28, sets=3, reps='8-10', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=2, exercise_id=29, sets=3, reps='20-25', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=2, exercise_id=26, sets=3, reps='8-12', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=2, exercise_id=35, sets=2, reps='10', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=2, exercise_id=36, sets=3, reps='8-12', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=2, exercise_id=1, sets=3, reps='8', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=2, exercise_id=37, sets=2, reps='12', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=2, exercise_id=38, sets=2, reps='12-10', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=2, exercise_id=28, sets=3, reps='8-10', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=2, exercise_id=29, sets=3, reps='20-25', weight=22))
 
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=3, exercise_id=40, sets=3, reps='12-10-8', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=3, exercise_id=41, sets=3, reps='8', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=3, exercise_id=11, sets=3, reps='10', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=3, exercise_id=14, sets=3, reps='8-12', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=3, exercise_id=42, sets=3, reps='8-10', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=3, exercise_id=4, sets=2, reps='10-8', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=3, exercise_id=43, sets=2, reps='12-10', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=3, exercise_id=44, sets=3, reps='10-12', weight=22))
-    WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=2, id_training_plan=3, exercise_id=45, sets=3, reps='25-30', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=3, exercise_id=40, sets=3, reps='12-10-8', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=3, exercise_id=41, sets=3, reps='8', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=3, exercise_id=11, sets=3, reps='10', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=3, exercise_id=14, sets=3, reps='8-12', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=3, exercise_id=42, sets=3, reps='8-10', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=3, exercise_id=4, sets=2, reps='10-8', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=3, exercise_id=43, sets=2, reps='12-10', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=3, exercise_id=44, sets=3, reps='10-12', weight=22))
+    WorkoutExercisesTable.add_workout_exercise(
+        StrWorkoutExercises(workout_id=2, id_training_plan=3, exercise_id=45, sets=3, reps='25-30', weight=22))
 
-#Terza scheda
+    # Terza scheda
 
-    TrainingPlansTable.add_training_plans(StrTrainingPlans(user_id=1, workout=4, name="2", goal="Ipertrofia", duration=8))
+    TrainingPlansTable.add_training_plans(
+        StrTrainingPlans(user_id=1, workout=4, name="2", goal="Ipertrofia", duration=8))
 
     WorkoutTable.add_workout(StrWorkout(id_workout=3, id_training_plan=1, name="Lunedì", day_week="Lunedi"))
     WorkoutTable.add_workout(StrWorkout(id_workout=3, id_training_plan=2, name="Mercoledì", day_week="Mercoledi"))
     WorkoutTable.add_workout(StrWorkout(id_workout=3, id_training_plan=3, name="Venerdì", day_week="Venerdi"))
     WorkoutTable.add_workout(StrWorkout(id_workout=3, id_training_plan=4, name="Sabato", day_week="Sabato"))
 
-    #WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=4, id_training_plan=1, exercise_id=, sets=, reps='', weight=22))
-
-
+    # WorkoutExercisesTable.add_workout_exercise(StrWorkoutExercises(workout_id=4, id_training_plan=1, exercise_id=, sets=, reps='', weight=22))
+"""
     setting: Setting = Setting()
-
-    # SettingScreen()
 
     MainScreen()
 
